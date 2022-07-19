@@ -1,0 +1,30 @@
+{
+    "cSpell.words": [
+        "arange",
+        "cmap",
+        "coef",
+        "dtype",
+        "pinv",
+        "pyplot",
+        "rstride",
+        "setosa",
+        "sklearn",
+        "stdv",
+        "viridis",
+        "xlabel",
+        "xticklabels",
+        "xtmp",
+        "ylabel",
+        "yticklabels",
+        "zorder",
+        "zticklabels"
+    ],
+    "cSpell.language": "en,en-GB",
+    "todo-tree.tree.showBadges": true,
+    "workbench.colorCustomizations": {
+        // "activityBar.background": "#f4f4f4",
+        // "activityBar.foreground": "#000000"
+        // "editor.background": "#000000",
+    },
+    
+}
