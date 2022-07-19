@@ -27,11 +27,23 @@ class TheModelClass(nn.Module):
         return x
 
 
-my_net = TheModelClass()
-print("this is model.parameters():")
-print("model.parameters.type:\t", type(my_net.parameters()))
-print("params.type:\t", type(next(my_net.parameters())))
-for param in my_net.parameters():
-    print("param.type2:\t", type(param))
-    break
+def test_param():
+    my_net = TheModelClass()
+    print("this is model.parameters():")
+    print("model.parameters.type:\t", type(my_net.parameters()))
+    print("params.type:\t", type(next(my_net.parameters())))
+    for param in my_net.parameters():
+        print("param.type2:\t", type(param))
+        break
 
+
+def grad_clipping(net: nn.Module, theta):
+    params = [p for p in net.parameters() if p.requires_grad]
+    norm = torch.sqrt(sum(torch.sum((p.grad ** 2)) for p in params))
+    if norm > theta:
+        for param in params:
+            param.grad[:] *= theta / norm
+
+
+if __name__ == "__main__":
+    ...
