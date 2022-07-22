@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.optim
 import torch.utils.data as udata
 from typing import *
-from NLP_kits.nlp_tricks import grad_clipping
+from nlp_model.tricks.nlp_tricks import grad_clipping
 
 from rnn_model import RNNModel
 
